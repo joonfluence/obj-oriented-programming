@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="/Chapter1_basics/class.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <strong>Object Oriented Programming을 연습하기 위한 페이지입니다.</strong>
+    </nav>
+    <div>
+        <h3>1. Class.js : 클래스란?</h3>
+        <p>1) 클래스란 일종의 틀이다. 객체란 클래스의 인스턴스이다. </p>
+        <p>2) 콜스택이 초과되었다는 오류가 발생하는 까닭은 getter를 정의한 순간 this.age는 메모리에 있는 변수를 불러오는 것이 아니라, getter를 실행한다. 마찬가지로 setter를 정의한 순간 this.age에 age를 할당하는 것이 아니라 setter를 호출한다. 즉, setter에 돌아와서 또 다시 setter를 실행하고 이 작업이 무한정 반복되고 있기 때문이다.</p>
+        <p>3) 이것을 방지하기 위해선 getter와 setter의 변수명에 _(언더바)를 추가해줘야 한다.</p>
+        <p>4) 클래스에 extends라는 키워드를 사용하여 상속 받으면, 부모 클래스로부터 공통적인 요소들을 받아올 수 있게 된다. 또한 같은 메소드를 오버라이딩할 수 있는데, 이는 부모로부터 상속 받은 메소드를 수정해서 사용하는 것을 말한다. 만약 상속 받은 메소드를 사용하고 싶으면 super.draw(메소드명)을 추가해주면 된다.</p>
+        <p>5) 자바스크립트에서 만든 모든 Class들은 자바스크립트의 Object로부터 상속 받은 것이다. 즉, Object로부터 공통 메소드를 상속 받는다는 점이며, 이들을 오버라이딩해서 사용할 수도 있다.</p>
+    </div>
+</body>
+</html>
