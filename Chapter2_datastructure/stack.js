@@ -52,14 +52,13 @@ class Stack {
 function init() {
   const stack = new Stack();
 
-  console.log(stack.push(3));
-  console.log(stack.push(5));
-  console.log(stack.push(7));
-  console.log(stack.push(9));
-  console.log(stack.pop());
-  console.log(stack.pop());
-  console.log(stack.pop());
-  console.log(stack.pop());
+  for (let i = 1; i < 13; i = i + 2) {
+    console.log(stack.push(i));
+  }
+
+  for (let i = 1; i < 13; i = i + 2) {
+    console.log(stack.pop());
+  }
 }
 
 init();
