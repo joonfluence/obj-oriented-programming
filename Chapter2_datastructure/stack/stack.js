@@ -51,7 +51,7 @@ class Stack {
   }
 }
 
-function init() {
+const init = () => {
   const stack = new Stack();
   console.log("연결리스트 기반의 스택을 구현해보자");
 
@@ -64,6 +64,6 @@ function init() {
   for (let i = 1; i < 13; i = i + 2) {
     console.log(stack.pop());
   }
-}
+};
 
 init();
