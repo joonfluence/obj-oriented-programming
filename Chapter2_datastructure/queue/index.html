@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="queue.js"></script>
+    <title>Learning Queue</title>
+</head>
+<body>
+    <main>
+        <h1>JS로 구현하는 자료구조 ② 큐</h1>
+        <div>
+            <h2>큐 자료구조로 구현된 것들</h2>
+            <ul>
+                <li>프린터의 인쇄 대기열 : 가장 오래 기다린 작업부터 처리한다. </li>
+                <li><strong>프로세스 관리</strong> : 프로세스(process)는 컴퓨터에서 연속적으로 실행되고 있는 컴퓨터 프로그램을 말한다. 큐는 프로세스를 관리할 때 운영체제의 커널에서 사용된다. 커널이란 메모리에 상주하는 운영체제의 부분을 말하며, 좁은 의미의 운영체제라고도 한다. 커널 내에 프로세스의 상태를 나타내는 준비 큐, 대기 큐, 실행 큐 등이 큐 자료 구조를 활용한다. 
+                </li>
+                <li>콜센터 고객 대기시간 : 대기 중인 고객 중 가장 먼저 전화를 준 이에게 연결이 이뤄진다.</li>
+                <li>BFS(Breath-First-Algorithm) 알고리즘 : 시작 정점으로부터 가까운 정점을 먼저 방문하고 멀리 떨어져 있는 정점을 나중에 방문하는 순회 방법이다.</li>
+            </ul>
+        </div>
+        <div>
+            <h2>주요특성</h2>
+            <ul>
+                <li>선입선출(Last-In, Fast-Out) 구조의 자료구조이다.</li>
+            </ul>
+        </div>
+        <div>
+            <h2>필요한 메소드</h2>
+            <ul>
+                <li>Peek() : 저장순서가 가장 앞선 데이터를 반환한다.</li>
+                <li>Enqueue() : 큐에 데이터를 저장한다.</li>
+                <li>Dequeue() : 저장순서가 가장 앞선 데이터를 삭제한다.</li>
+                <li>isEmpty() : 큐가 빈 경우에는 true, 아닌 경우에는 false를 반환한다.</li>
+            </ul>
+        </div>        
+        <div>
+            <h2>배열 기반 vs 연결리스트 기반</h2>
+            <ul>
+                <li>배열 기반 : 원형 큐를 만들어 구현한다.</li>
+                <li>연결리스트 기반 : 연결리스트 기반 스택 자료구조와 유사하다.</li>
+            </ul>
+        </div>
+        <div>
+            <h2>관련문제</h2>
+            <ul>
+                <li><a href="https://programmers.co.kr/learn/courses/30/lessons/42587">프린터 (프로그래머스) </a></li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>

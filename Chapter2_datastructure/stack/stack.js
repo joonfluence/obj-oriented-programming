@@ -11,8 +11,8 @@ class Stack {
     this.top = null;
   }
 
-  top() {
-    return this.top.data;
+  peek() {
+    return this.top;
   }
 
   isEmpty() {
@@ -25,10 +25,12 @@ class Stack {
       return false;
     }
 
-    const popNode = this.top;
+    let popNode = this.top;
+    const popData = popNode.data;
     this.top = popNode.next;
+    popNode = null;
     this.length--;
-    return popNode.data;
+    return popData;
   }
 
   push(data) {
@@ -51,10 +53,13 @@ class Stack {
 
 function init() {
   const stack = new Stack();
+  console.log("연결리스트 기반의 스택을 구현해보자");
 
   for (let i = 1; i < 13; i = i + 2) {
     console.log(stack.push(i));
   }
+
+  console.log(stack.peek());
 
   for (let i = 1; i < 13; i = i + 2) {
     console.log(stack.pop());
