@@ -1,4 +1,4 @@
-class bTreeNode {
+export default class BTreeNode {
   constructor(data) {
     this.data = data;
     this.left = null;
@@ -6,7 +6,7 @@ class bTreeNode {
   }
 }
 
-class bTree {
+export default class BTree {
   constructor(node) {
     this.root = node;
   }
