@@ -1,14 +1,18 @@
-export default class BTreeNode {
-  constructor(data) {
-    this.data = data;
+export class BTreeNode {
+  constructor() {
+    this.data = null;
     this.left = null;
     this.right = null;
   }
 }
 
-export default class BTree {
+export class BTree {
   constructor(node) {
     this.root = node;
+  }
+
+  setData(bt, data) {
+    bt.data = data;
   }
 
   makeLeftSubTree(main, sub) {
@@ -49,32 +53,32 @@ export default class BTree {
   }
 }
 
-const init = () => {
-  const nodeOne = new bTreeNode(1);
-  const binaryTree = new bTree(nodeOne);
-  const nodeTwo = new bTreeNode(2);
-  const nodeThree = new bTreeNode(3);
+// const init = () => {
+//   const nodeOne = new bTreeNode(1);
+//   const binaryTree = new bTree(nodeOne);
+//   const nodeTwo = new bTreeNode(2);
+//   const nodeThree = new bTreeNode(3);
 
-  binaryTree.makeLeftSubTree(nodeOne, nodeTwo);
-  binaryTree.makeRightSubTree(nodeOne, nodeThree);
+//   binaryTree.makeLeftSubTree(nodeOne, nodeTwo);
+//   binaryTree.makeRightSubTree(nodeOne, nodeThree);
 
-  const nodeFour = new bTreeNode(4);
-  const nodeFive = new bTreeNode(5);
+//   const nodeFour = new bTreeNode(4);
+//   const nodeFive = new bTreeNode(5);
 
-  binaryTree.makeLeftSubTree(nodeTwo, nodeFour);
-  binaryTree.makeRightSubTree(nodeTwo, nodeFive);
+//   binaryTree.makeLeftSubTree(nodeTwo, nodeFour);
+//   binaryTree.makeRightSubTree(nodeTwo, nodeFive);
 
-  const nodeSix = new bTreeNode(6);
-  const nodeSeven = new bTreeNode(7);
+//   const nodeSix = new bTreeNode(6);
+//   const nodeSeven = new bTreeNode(7);
 
-  binaryTree.makeLeftSubTree(nodeThree, nodeSix);
-  binaryTree.makeRightSubTree(nodeThree, nodeSeven);
+//   binaryTree.makeLeftSubTree(nodeThree, nodeSix);
+//   binaryTree.makeRightSubTree(nodeThree, nodeSeven);
 
-  binaryTree.PreorderTraverse(nodeOne);
-  console.log(" ");
-  binaryTree.InorderTraverse(nodeOne);
-  console.log(" ");
-  binaryTree.PostorderTraverse(nodeOne);
-};
+//   binaryTree.PreorderTraverse(nodeOne);
+//   console.log(" ");
+//   binaryTree.InorderTraverse(nodeOne);
+//   console.log(" ");
+//   binaryTree.PostorderTraverse(nodeOne);
+// };
 
-init();
+// init();
