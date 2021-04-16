@@ -5,7 +5,7 @@ class Node {
   }
 }
 
-export class Stack {
+export default class Stack {
   constructor() {
     this.length = 0;
     this.top = null;
@@ -51,19 +51,19 @@ export class Stack {
   }
 }
 
-const init = () => {
-  const stack = new Stack();
-  console.log("연결리스트 기반의 스택을 구현해보자");
+// const init = () => {
+//   const stack = new Stack();
+//   console.log("연결리스트 기반의 스택을 구현해보자");
 
-  for (let i = 1; i < 13; i = i + 2) {
-    console.log(stack.push(i));
-  }
+//   for (let i = 1; i < 13; i = i + 2) {
+//     console.log(stack.push(i));
+//   }
 
-  console.log(stack.peek());
+//   console.log(stack.peek());
 
-  for (let i = 1; i < 13; i = i + 2) {
-    console.log(stack.pop());
-  }
-};
+//   for (let i = 1; i < 13; i = i + 2) {
+//     console.log(stack.pop());
+//   }
+// };
 
-init();
+// init();
