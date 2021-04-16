@@ -7,8 +7,6 @@ class ExpressionTree extends BTree {
     super(node);
   }
 
-  // 계산하는 함수
-
   setData(bt, data) {
     bt.data = data;
     return bt.data;
@@ -42,6 +40,31 @@ class ExpressionTree extends BTree {
     return stack.pop();
   }
 
+  EvaluateExpTree(bt) {
+    if (
+      super.getLeftSubTree(bt) === null &&
+      super.getRightSubTree(bt) === null
+    ) {
+      return super.getData(bt);
+    }
+
+    const op1 = this.EvaluateExpTree(super.getLeftSubTree(bt));
+    const op2 = this.EvaluateExpTree(super.getRightSubTree(bt));
+
+    switch (super.getData(bt)) {
+      case "+":
+        return op1 + op2;
+      case "-":
+        return op1 - op2;
+      case "*":
+        return op1 * op2;
+      case "/":
+        return op1 / op2;
+    }
+
+    return 0;
+  }
+
   ShowPrefixTypeExp(bt) {
     super.PreorderTraverse(bt);
   }
@@ -58,15 +81,19 @@ class ExpressionTree extends BTree {
 const init = () => {
   const exp = "12+7*";
   const et = new ExpressionTree();
-  const topNode = et.MakeExpTree(exp);
 
-  console.log("topNode", topNode);
+  // 수식트리
+  const expTree = et.MakeExpTree(exp);
 
-  et.ShowPrefixTypeExp(topNode);
+  console.log("expTree", expTree);
+
+  et.ShowPrefixTypeExp(expTree);
   console.log(" ");
-  et.ShowInfixTypeExp(topNode);
+  et.ShowInfixTypeExp(expTree);
   console.log(" ");
-  et.ShowPostfixTypeExp(topNode);
+  et.ShowPostfixTypeExp(expTree);
+
+  console.log(et.EvaluateExpTree(expTree));
 };
 
 init();
