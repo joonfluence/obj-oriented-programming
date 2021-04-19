@@ -93,7 +93,7 @@ const init = () => {
   console.log(" ");
   et.ShowPostfixTypeExp(expTree);
 
-  console.log(et.EvaluateExpTree(expTree));
+  console.log("result", et.EvaluateExpTree(expTree));
 };
 
 init();
