@@ -17,10 +17,12 @@ export class arraylist {
   }
 
   push(data) {
+    this.increase();
     return this.array.push(data);
   }
 
   poo() {
+    this.decrease();
     return this.array.pop();
   }
 
