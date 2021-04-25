@@ -2,8 +2,8 @@ import { arraylist } from "../arraylist/array.js";
 
 export class Heap extends arraylist {
   constructor() {
-    console.log(super());
-    console.log((this.array[0] = null));
+    super();
+    this.array[0] = null;
   }
 
   isEmpty() {
@@ -43,9 +43,6 @@ export class Heap extends arraylist {
     let temp = this.array[indexA];
     this.array[indexA] = this.array[indexB];
     this.array[indexB] = temp;
-    console.log("this.array", this.array);
-    console.log("this.array[indexB]", this.array[indexB]);
-    console.log("this.array[indexA]", this.array[indexA]);
   }
 
   Insert(data) {
@@ -81,7 +78,6 @@ export class Heap extends arraylist {
     this.array[rootIdx] = super.pop();
 
     let childIdx = this.getHiPriChildIndex(rootIdx);
-    console.log("childIdx", childIdx);
     // ③ 자식 노드의 우선순위가 더 낮아질 때까지 값을 변경한다.
     while (this.array[childIdx] < this.array[rootIdx]) {
       this.swap(childIdx, rootIdx);
@@ -102,7 +98,7 @@ const init = () => {
   testHeap.Insert(10);
   testHeap.Insert(3);
   testHeap.Insert(1);
-  console.log(testHeap);
+  console.log(testHeap.array);
 };
 
-init();
+// init();
