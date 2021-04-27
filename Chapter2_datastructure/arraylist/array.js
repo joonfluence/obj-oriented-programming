@@ -8,12 +8,16 @@ export class arraylist {
     return this._length;
   }
 
+  set length(num) {
+    this._length = num;
+  }
+
   increase() {
-    return this._length + 1;
+    return ++this._length;
   }
 
   decrease() {
-    return this._length - 1;
+    return --this._length;
   }
 
   push(data) {
@@ -21,7 +25,7 @@ export class arraylist {
     return this.array.push(data);
   }
 
-  poo() {
+  pop() {
     this.decrease();
     return this.array.pop();
   }
