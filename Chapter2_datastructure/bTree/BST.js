@@ -2,7 +2,15 @@ import { BTreeNode, BTree } from "./bTree.js";
 
 class BST extends BTree {
   constructor(data) {
-    this.root = new BTreeNode(data);
+    super(new BTreeNode(data));
+  }
+
+  get root() {
+    return this._root;
+  }
+
+  set root(node) {
+    this._root = node;
   }
 
   insert(data) {
@@ -33,7 +41,6 @@ class BST extends BTree {
       } else {
         super.makeRightSubTree(parentNode, newNode);
       }
-
       // parentNode가 루트노드이면
     } else {
       this.root = newNode;
@@ -92,3 +99,20 @@ class BST extends BTree {
     }
   }
 }
+
+function init() {
+  const bst = new BST(3);
+  bst.insert(1);
+  bst.insert(4);
+  bst.insert(5);
+  bst.insert(6);
+
+  console.log("Preorder");
+  bst.PreorderTraverse(bst.root);
+  console.log("\nInorder");
+  bst.InorderTraverse(bst.root);
+  console.log("\nPostOrder");
+  bst.PostorderTraverse(bst.root);
+}
+
+init();

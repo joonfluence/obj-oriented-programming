@@ -40,7 +40,7 @@ export class BTree {
       return;
     }
 
-    console.log(root.data);
+    process.stdout.write(root.data.toString() + " ");
     this.PreorderTraverse(root.left);
     this.PreorderTraverse(root.right);
   }
@@ -50,7 +50,7 @@ export class BTree {
       return;
     }
     this.InorderTraverse(root.left);
-    console.log(root.data);
+    process.stdout.write(root.data.toString() + " ");
     this.InorderTraverse(root.right);
   }
 
@@ -61,7 +61,7 @@ export class BTree {
 
     this.PostorderTraverse(root.left);
     this.PostorderTraverse(root.right);
-    console.log(root.data);
+    process.stdout.write(root.data.toString() + " ");
   }
 }
 
