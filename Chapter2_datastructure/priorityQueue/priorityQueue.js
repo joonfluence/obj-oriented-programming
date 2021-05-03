@@ -22,7 +22,10 @@ const init = () => {
   PQ.Insert(2);
   PQ.Insert(5);
   PQ.Insert(7);
-  console.log(PQ);
+
+  for (let i = 1; i < PQ.array.length; i++) {
+    process.stdout.write(PQ.array[i] + " ");
+  }
 };
 
 init();

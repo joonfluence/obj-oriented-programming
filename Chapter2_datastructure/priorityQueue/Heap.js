@@ -107,16 +107,14 @@ export class Heap extends arraylist {
 const init = () => {
   const arr = [3, 4, 2, 1, 6, 8, 5, 10, 12];
   const hp = new Heap();
-  // hp.Insert(4);
-  // hp.Insert(2);
-  // hp.Insert(8);
-  // hp.Insert(6);
-  // hp.Insert(10);
-  // hp.Insert(3);
-  // hp.Insert(1);
-  // console.log(hp.array);
-
+  hp.Insert(4);
+  hp.Insert(2);
+  hp.Insert(8);
+  hp.Insert(6);
+  hp.Insert(10);
+  hp.Insert(3);
+  hp.Insert(1);
   hp.sort(arr);
 };
 
-init();
+// init();
