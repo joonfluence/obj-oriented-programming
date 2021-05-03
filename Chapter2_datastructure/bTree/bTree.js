@@ -11,6 +11,14 @@ export class BTree {
     this.root = node;
   }
 
+  get root() {
+    return this._root;
+  }
+
+  set root(node) {
+    this._root = node;
+  }
+
   getData(bt) {
     return bt.data;
   }
